@@ -3,8 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="css/mui.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/mui.js"></script>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/index.js"></script>
 </head>
+
 <body>
-<p>hello world!</p>
+
+    <div class="mui-panel" id="bar">
+        <div class="mui--text-headline mui--text-white">JSON转Objective-C对象</div>
+        <div class="mui--text-title mui--text-light-secondary">cry4tal</div>
+    </div>
+    <div class="mui-container">
+        <!-- -->
+        <div class="mui-textfield mui-panel">
+            <textarea placeholder="json" class="tr_textarea" id="tr_jsonTextarea"></textarea>
+        </div>
+
+        <div>
+            <button class="mui-btn mui-btn--primary" id="tr_transformerBtn">转换</button>
+        </div>
+
+        <div class="mui-panel" id="tr_objCTextarea" style="word-wrap:break-word" hidden="true"></div>
+    </div>
 </body>
 </html>

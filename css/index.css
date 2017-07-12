@@ -1,0 +1,17 @@
+
+body{
+    background-color: #EEEEEE;
+}
+
+textarea{
+    resize: none;
+}
+
+#bar{
+    height: 64px;
+    background-color: #2196F3;
+}
+
+.tr_textarea{
+    height: 100px;
+}
