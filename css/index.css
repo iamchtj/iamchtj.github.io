@@ -7,6 +7,10 @@ textarea{
     resize: none;
 }
 
+ol{
+    color: #666;
+}
+
 #bar{
     height: 64px;
     background-color: #2196F3;
@@ -14,10 +18,12 @@ textarea{
 
 .tr_textarea{
     height: 100px;
+    color: #666;
 }
 
 .middleBtnDiv{
     margin-left: 0;
     margin-right: 0;
     text-align: center;
+    height: 90px;
 }

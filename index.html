@@ -14,20 +14,31 @@
 <body>
 
     <div class="mui-panel" id="bar">
-        <div class="mui--text-headline mui--text-white">JSON转Objective-C对象</div>
+        <!-- JSON转Objective-C对象 -->
+        <div class="mui--text-headline mui--text-white"></div>
         <div class="mui--text-title mui--text-light-secondary">cry4tal</div>
     </div>
     <div class="mui-container">
 
         <div class="mui-textfield mui-panel">
-            <textarea placeholder="json" class="tr_textarea" id="tr_jsonTextarea"></textarea>
+            <textarea placeholder="json" class="tr_textarea" id="tr_jsonTextarea">{
+	"animals":{
+	"dog":[
+		{"name":"Rufus","breed":"labrador","count":1,"twoFeet":false},
+		{"name":"Marty","breed":"whippet","count":1,"twoFeet":false}
+	],
+	"cat":{"name":"Matilda"}
+}
+}</textarea>
         </div>
 
         <div class="middleBtnDiv">
             <button class="mui-btn mui-btn--fab mui-btn--primary" id="tr_transformerBtn">转换</button>
         </div>
+        <div>
+            <pre><ol id="tr_list" style="padding-left: 0"></ol></pre>
+        </div>
 
-        <div class="mui-panel" id="tr_objCTextarea" style="word-wrap:break-word" hidden="true"></div>
     </div>
 </body>
 </html>
