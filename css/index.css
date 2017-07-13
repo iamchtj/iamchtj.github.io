@@ -1,4 +1,36 @@
 
+@media (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2){
+
+    body{
+        font-size: 24px;
+    }
+
+    .mui-container{
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 960px;
+    }
+    .mui-textfield > textarea{
+        font-size: 24px;
+        color: #666;
+    }
+    .mui-btn--fab{
+        font-size: 24px;
+        width: 96px;
+        height: 96px;
+    }
+    .tr_bar_contain{
+        display: inline-flex;
+    }
+    .tr_bar_header{
+        font-size: 36px;
+        margin-top: 14px;
+    }
+    .tr_bar_title{
+        font-size: 18px;
+    }
+}
+
 body{
     background-color: #EEEEEE;
 }
@@ -11,7 +43,11 @@ ol{
     color: #666;
 }
 
-#bar{
+.mui-textfield > textarea{
+    color: #666;
+}
+
+.tr_bar{
     height: 64px;
     background-color: #2196F3;
 }
@@ -21,9 +57,8 @@ ol{
     color: #666;
 }
 
-.middleBtnDiv{
+.tr_middleBtnDiv{
     margin-left: 0;
     margin-right: 0;
     text-align: center;
-    height: 90px;
 }

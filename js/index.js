@@ -16,7 +16,7 @@ $(document).ready(function () {
         $("#tr_list").empty();
         if (objCFiles.length > 0){
             for (var idx in objCFiles){
-                var htmlCode = "<div class=\"mui-panel\">"
+                var htmlCode = "<div class='mui-panel' style='line-break: auto'>"
                     + objCFiles[idx]
                     + "</div>";
                 $("#tr_list").append(htmlCode);
