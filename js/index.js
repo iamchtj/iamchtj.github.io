@@ -12,8 +12,8 @@ $(document).ready(function () {
     $("#tr_transformerBtn").click(function () {
 
         var jsonStr = $("#tr_jsonTextarea").val();
-        getObjC(jsonStr);
         $("#tr_list").empty();
+        getObjC(jsonStr);
         if (objCFiles.length > 0){
             for (var idx in objCFiles){
                 var htmlCode = "<div class='mui-panel' style='line-break: auto'>"
@@ -32,8 +32,13 @@ function getObjC(json) {
     //     alert("json格式有误！");
     //     return;
     // }
-    var obj = JSON.parse(json);
-    getSingleObjC(obj, "RootModel");
+    try {
+        var obj = JSON.parse(json);
+        getSingleObjC(obj, "RootModel");
+    }catch(e) {
+        alert(e.toString());
+    }
+
 }
 // 根据一个对象生成单个类
 function getSingleObjC(obj, className) {
