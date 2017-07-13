@@ -15,3 +15,9 @@ textarea{
 .tr_textarea{
     height: 100px;
 }
+
+.middleBtnDiv{
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+}
