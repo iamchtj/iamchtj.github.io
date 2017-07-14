@@ -16,7 +16,7 @@ $(document).ready(function () {
         getObjC(jsonStr);
         if (objCFiles.length > 0){
             for (var idx in objCFiles){
-                var htmlCode = "<div class='mui-panel' style='line-break: auto'>"
+                var htmlCode = "<div class='mui-panel' style='line-break: auto; word-wrap: break-word'>"
                     + objCFiles[idx]
                     + "</div>";
                 $("#tr_list").append(htmlCode);
