@@ -80,7 +80,7 @@ function getProp(k, v) {
         return "\n" + typeStrong + ucfirst(k) + " *" + k + ";";
 
     }
-    return "\n// 未知类型 null \n" + typeStrong + "id *" + k + ";";;
+    return "\n// 未知类型 null \n" + typeStrong + "id " + k + ";";;
 }
 // 工具方法
 function isInt(v){
