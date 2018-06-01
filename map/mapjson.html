@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>查看地图数据</title>
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta name="viewport" content="width=device-width, initial-scale=.5, maximum-scale=.5, user-scalable=no">
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/mui.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+    <div id="contain">
+
+    </div>
+    <script type="text/javascript">
+        var data = _GET_DATA("data");
+        if (data){
+            $("#contain").html(JSON.stringify(data));
+        }
+    </script>
+</body>
+</html>

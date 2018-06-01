@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自动登录</title>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/api.js?v=2"></script>
+    <script>
+        var username = request('user');
+        var password = request('pass');
+        var url = decodeURIComponent(request('url'));
+        login(username,password,function(res){
+            if(res.success){
+                location = url;
+                $('label').text('登录成功');
+            }else{
+                $('label').text('登录失败');
+            }
+            
+        },function(){
+            $('label').text('接口失败');
+        });
+    </script>
+</head>
+<body>
+    <label>正在登录</label>
+</body>
+</html>

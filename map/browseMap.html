@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>查看地图</title>
+        <meta http-equiv="imagetoolbar" content="no">
+        <meta name="viewport" content="width=device-width, initial-scale=.5, maximum-scale=.5, user-scalable=no">
+        <link rel="stylesheet" type="text/css" href="css/mui.min.css">
+        <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="js/mui.min.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/browseMap.js"></script>
+    </head>
+
+    <body>
+        <ul class="mui-table-view" style="margin-top: 2%">
+            <li class="mui-table-view-cell mui-media">
+                <div class="mui-media-body">
+                    <div class="mui-row">
+                        <div class="mui-row">
+                            <input id="file_input" type="file" class="mui-input-clear" style="width: 50%" placeholder="路径" multiple>
+                            <!--<div style="display: flex; margin-top: 16px">-->
+                                <!--<div style="margin: auto; margin-left: 0px; margin-right: 0px">是否地上</div>-->
+                                <!--<div style="margin: auto; margin-left: 0px; margin-left: 8px">-->
+                                    <!--<div id="switch" class="mui-switch" >-->
+                                        <!--<div class="mui-switch-handle"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        </div>
+                        <div class="mui-row" style="margin-top: 10pt">
+                            <button type="button" onclick="generateMap()" class="mui-btn mui-btn-primary" >生成地图</button>
+                            <button type="button" id="browseMapBtn" onclick="browseMapWithData()" class="mui-btn mui-btn-primary" hidden>预览地图</button>
+                            <button type="button" id="browseMapBtn" onclick="browseDebugMapWithData()" class="mui-btn mui-btn-primary" hidden>预览地图(带路径)</button>
+                            <button type="button" id="browseJsonBtn" onclick="browseJSON()" class="mui-btn mui-btn-primary" hidden>获取map.json</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="mui-table-view-cell mui-media">
+                <div class="mui-media-body">
+                    <div class="mui-row">
+                        <label>地图路径</label>
+                        <input id="srcInput" type="text" class="mui-input-clear" style="width: 50%" placeholder="路径">
+                        <div class="mui-row">
+                            <button type="button" onclick="browseMap()" class="mui-btn mui-btn-primary" >查看地图</button>
+                            <button type="button" onclick="browseCoordinate()" class="mui-btn mui-btn-primary" >查看坐标</button>
+                            <button type="button" onclick="browseAndCheckOutMap()" class="mui-btn mui-btn-primary" >路径检查</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </body>
+</html>

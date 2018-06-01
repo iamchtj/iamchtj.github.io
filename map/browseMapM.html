@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>场内导航</title>
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="viewport" content="width=device-width, initial-scale=.5, maximum-scale=.5, user-scalable=no"> 
+<link rel="stylesheet" type="text/css" href="css/mui.min.css">
+<link rel="stylesheet" type="text/css" href="css/demo.Default.css">
+<link rel="stylesheet" type="text/css" href="css/google.css">
+<link rel="stylesheet" type="text/css" href="css/map.css">
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/pointjudge.js"></script>
+<script type="text/javascript" src="js/priorityQueue.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/draw.js"></script>
+<script type="text/javascript" src="js/api.js"></script>
+<script type="text/javascript" src="js/browseMapM.js"></script>
+</head>
+<body>
+  <div class="cube"></div>
+   <div style="width: 100%; height: 100%; position: fixed; z-index: 14; left: 0px; top: 0px;" class="viewer" id="viewerDiv">
+	   <div id="zoom">
+			<div id="zoomIn"></div>
+			<div id="zoomOut"></div>
+	   </div>
+	   <div class="znz"></div>
+       <div class="sao"></div>
+	   <div id="menu">
+            <div>
+                <ol style="top:0px;" class="widget-floorpicker-slider">
+
+                </ol>
+
+            </div>
+
+	   </div>
+        <nav>
+
+        </nav>
+       <div id="div_parent" style="position: absolute; left: 0px; top: 111px; width: 2000px; height: 2000px; overflow: visible;">
+           <loadding>加载中...<span></span></loadding>
+           <canvas id="canvas" width="723" height="506" style="position: absolute; z-index: 0; left: 0px; top: 0px; visibility: visible;"></canvas>
+       </div>
+
+   </div>
+   <div id="info">
+       <div class="text">
+<!--           <div class="line1">温馨提示：</div>-->
+           <div class="line2">当前位置：<span class="currentAddress">...</span></div>
+           <div class="line3"><span class="targetName">目标位置</span>：<span class="targetAddress">...</span></div>
+<!--           <div class="line3"><span class="calcType"></span>距离您当前位置约<span class="calcPathLength">0</span>米</div>-->
+       </div>
+       <div class="btn_lookcar" id="btn_lookcar">
+           <div class="img"></div>
+           <label></label>
+       </div>
+   </div>
+    <cover>
+        <popup id="otherList">
+            <close></close>
+            <div class="title">请选择入口 <img src="img/close.png" alt=""  class="close"/></div>
+            <ul class="post_ul">
+                <li>
+                    
+                </li>             
+            </ul>
+        </popup>
+        <popup id="space">
+            <close></close>
+            <div class="title">车位导航 <img src="img/close.png" alt=""  class="close"/></div>
+            <h6>车位编号</h6>
+            <input type="text" placeholder="请输入车位编号..." />
+            <div class="btns">
+                <div class="btn" id="iamhere">我在这里</div>
+                <div class="btn" id="carhere">车在这里</div>
+            </div>
+        </popup>
+        <popup id="index">
+            <img src="" alt="" class="index">
+            <img src="img/close1.png" alt=""  class="close"/>
+        </popup>
+    </cover>
+
+</body></html>

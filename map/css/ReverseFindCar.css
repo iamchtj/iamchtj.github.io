@@ -1,0 +1,84 @@
+body{
+	margin:0px;
+	padding:0px;
+	background-color: #f4f4f4;
+}	
+
+.tops {
+	width: 100%;
+	border-top: 1px solid #d3d3d3;
+	border-bottom: 1px solid #d3d3d3;
+	margin-top: 23px;
+	background-color: #ffffff;
+}
+
+.top{
+	height: 87px;
+    padding-left: 24px;
+}
+.top p{
+	width: 100%;
+	font-size:28px;
+	font-family: Hiragino Sans GB W3;
+	line-height: 87px;
+	color: #7f7f7f;
+	margin: 0px;
+}
+
+.top span{
+	float: right;
+	margin-right: 24px;
+	color: #333333;
+}
+
+hr{
+	border-top:1px solid #d3d3d3;
+	border-bottom: 0px;
+	margin-left: 24px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.btns{
+	width: 100%;
+	margin-top: 38px;
+	background-color: #ffffff;
+	border-top: 1px solid #d3d3d3;
+	border-bottom: 1px solid #d3d3d3;
+}
+
+.btn{
+	height: 87px;
+    padding-left: 24px;
+}
+
+.btn.disabled{
+    opacity: 0.5;
+}
+.btn.tap{
+    background-color: #f1f1f1;
+}
+
+.btn img{
+	margin-top: 20px;
+	margin-right: 15px;
+	float: left;
+}
+
+.btn p{
+	width: 100%;
+	font-size:28px;
+	font-family: Hiragino Sans GB W3;
+	line-height: 89px;
+	margin: 0px;
+	color: #333333;
+}
+.btn span{
+	width: 13px;
+	height: 87px;
+	float: right;
+	padding: 0px;
+	margin-right: 40px;
+	color: #c7c7c7;
+	background-image: url(../img/arrow.png);
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>通通地图--数据管理工具</title>
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="viewport" content="width=device-width, initial-scale=.5, maximum-scale=1, user-scalable=no"> 
+<link rel="stylesheet" type="text/css" href="css/demo.Default.css">
+<link rel="stylesheet" type="text/css" href="css/google.css">
+<link rel="stylesheet" type="text/css" href="css/qrmap.css">
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/api.js"></script>
+<script type="text/javascript" src="js/pointjudge.js"></script>
+<script type="text/javascript" src="js/priorityQueue.js"></script>
+<script type="text/javascript" src="js/draw.js"></script>
+<script type="text/javascript" src="js/qrmap.js"></script>
+</head>
+<body>
+   <div style="width: 100%; height: 100%; position: fixed; z-index: 14999; left: 0px; top: 0px;" class="viewer" id="viewerDiv">
+	   <div id="position" style="position:absolute;left:0;top:0;z-index:2;"></div>
+	   <div id="zoom" style="position: absolute; z-index:1;top: 404px; right: 20px; width: 37px; height: 85px; background-image: url(img/zoom.png); background-repeat: no-repeat; background-position: center center;background-size: 100%;border-radius: 2px;">
+			<div id="zoomIn" style="cursor: pointer;z-index:1; width: 41px; height: 41px; "></div>
+			<div id="zoomOut" style="cursor: pointer;z-index:1; width: 41px; height: 41px; "></div>
+	   </div>
+	   <div id="buttons">
+	       <button id="downQRList">打包下载二维码图</button>
+	       <button id="enabledSpaceNo">开始车位关联</button>
+	       <button id="enabledQuickCode">启用快速编号模式</button>
+	       <button id="disabledQuickCode" style="display:none">结束快速编号</button>
+	   </div>
+	   <div id="menu" style="position: absolute; z-index:1;top: 40px; left: 80px; width: 41px;">
+					  
+				<div>
+					<ol style="top:0px;" class="widget-floorpicker-slider">
+					</ol>
+				
+				</div>
+						
+	   </div>
+       <div id="div_parent" style="position: absolute; left: 0px; top: 111px; width: 0px; height: 0px; overflow: visible;">
+           <loadding>Loadding...<span></span></loadding>
+           <canvas id="canvas"></canvas>
+           
+           <div id="pop" class="pop">
+                <div class="title">新增扫码点</div>
+                <div class="content">名称：<input id="pop_name" type="text"></div>
+                <div class="content">坐标：<label id="pop_xy"></label></div>
+                <div><button id="pop_btn_save">保存</button></div>
+           </div>
+           <div id="pop_space" class="pop">
+                <div class="title">命名车位编号</div>
+                <div class="content">编号：<input id="pop_space_name" type="text"></div>
+                <div class="content">状态：<label id="pop_space_state"></label></div>
+                <div><button id="pop_space_save">保存</button></div>
+           </div>
+            <div id="pop_qr">
+                <div class="title"><label id="pop_qr_name"></label></div>
+                <div class="qrcode"><img id='pop_qrcode' alt=""></div>
+                <div class="content">坐标：<label id="pop_qr_xy"></label></div>
+                <div><button id="pop_btn_del">删除</button></div>
+           </div>
+           <div id="space_new_code"></div>
+       </div>
+        <div id="mapPointInfo">
+            
+        </div>
+        
+   </div>
+   <div id="info"></div>
+    <cover>
+        <popup class="featureList">
+            
+            <div>
+                <button class="add" style="float:left">新增</button>
+                <button class="close">关闭</button>
+                <div class="title label"></div>
+                <div class="title input"><input type="text"></div>
+                
+            </div>
+            
+            <ul>
+                <li>
+                    <div class="name">加载中...</div>
+                </li>
+            </ul>
+            
+            <div class="add">
+                <input type="text" id="name"/>
+                <input type="radio" name="type" value="enter-shop" id="shop" checked><label for="shop">商场</label>
+                <input type="radio" name="type" value="enter-hotel" id="hotel"><label for="hotel">公寓</label>
+                <button class="btn_cancel">取消</button>
+                <button class="btn_save">保存</button>
+                
+            </div>
+        </popup>
+        <popup class="SpaceCodeStart">
+            
+            <div>
+                <button class="close">关闭</button>
+                <div class="title label"></div>
+                
+            </div>
+            
+            <div class="div">
+                <input type="text" id="first_code" placeholder="前缀"/>
+                <input type="text" id="var_code" placeholder="自增变量"/>
+                <input type="text" id="last_code" placeholder="后缀"/>
+                <button class="btn_start">开始</button>
+                
+            </div>
+        </popup>
+    </cover>
+</body></html>
